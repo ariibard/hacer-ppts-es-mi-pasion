@@ -3,7 +3,8 @@ $colors: (
   "black": #222222,
   "pink-light":#ffc0c6,
   "pink": #F78DA7,
-  "pink-dark": #C71585
+  "pink-dark": #C71585,
+  "green": #f7a88d
 );
 
 /*-- scss:functions --*/
@@ -21,7 +22,7 @@ $font-family-sans-serif: "Dosis", sans-serif;
 
 $body-bg: lighten(theme-color("pink-light"), 10%);
 $body-color: theme-color("black");
-$link-color: darken(theme-color("pink"), 20%);
+$link-color: darken(theme-color("green"), 20%);
 
 /*-- scss:rules --*/
 
@@ -48,7 +49,7 @@ $link-color: darken(theme-color("pink"), 20%);
   h5,
   h6 {
     font-family: "Sanchez", serif;
-    color: theme-color("pink-dark");
+    color: theme-color("pink");
   }
 }
 
@@ -72,7 +73,7 @@ $link-color: darken(theme-color("pink"), 20%);
 
 // flow
 .flow-quarto {
-  background-image: url(https://wallpapers.com/images/hd/red-hearts-background-1920-x-1080-39bf48c6hah98qv3.jpg);
+  background-image: url(https://st3.depositphotos.com/29384342/50359/i/450/depositphotos_503592252-stock-photo-carpet-flowers-beautiful-white-daisies.jpg);
   background-attachment: fixed;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -158,3 +159,15 @@ $link-color: darken(theme-color("pink"), 20%);
 .spin {
   animation: spin 4s linear infinite;
 }
+
+.codewindow {
+  color: black;
+}
+
+.codewindow .textarea .sourceCode {
+  background-color: white !important;
+}
+
+
+
+

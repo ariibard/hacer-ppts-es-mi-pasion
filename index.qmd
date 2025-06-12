@@ -4,6 +4,9 @@ format:
     theme: [default, styles.scss]
     width: 1280
     height: 720
+    include-after-body: 
+    - "all-the-js-code.html"
+pagetitle: hacer ppts es mi pasión
 echo: false
 menu: false
 code-line-numbers: false
@@ -55,7 +58,7 @@ Todo lo que necesitas
 [en un solo lugar]{.text-black} 😉
 :::
 
-## Esta es la señal que esperabas para empezar a usar Quarto everywhere {.center style="text-align: center;"}
+## Esta es la señal que esperabas para empezar a usar Quarto para todo {.center style="text-align: center;"}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -67,4 +70,71 @@ Todo lo que necesitas
 :::
 :::::
 
-## Quarto
+# Quarto
+
+![](assets/horst-qmd-render-schema.png)
+
+# Formatos
+
+- `revealjs` es el sustituto de Xaringan, pero con sintaxis nativa de Pandoc
+- `beamer` para diapositivas LaTex (PDF)
+- `Powerpoint` para cuando tengas que trabajar a través de Office
+
+::: {.callout-note}
+# Definiciones
+
+**`pandoc`** es una herramienta de conversión de documentos que permite transformar archivos markdown a pdf, word, latex, etc. 
+
+**`xaringan`** es un paquete de R basado también en reveal.js, muy popular en R Markdown
+
+**`reveal.js`** es un marco de trabajo de presentaciones HTML de código abierto. Permite a cualquier persona crear presentaciones completas y atractivas de forma gratuita en la web. Guía [aquí](https://quarto.org/docs/presentations/revealjs/)
+:::
+
+## {.center style="text-align: center;"}
+
+::: {.r-fit-text .title-text .text-pink}
+`{revealjs}`
+:::
+
+Allá vamos
+
+## Mi primer `ppt.qmd`
+
+![](assets/crear_ppt.gif)
+
+## Mi primer `ppt.qmd`
+
+:::: columns
+:::: {.column width="50%"}
+:::: {.codewindow .quarto}
+basic.qmd
+`````md
+{{< include incluir/basic.qmd >}}
+`````
+:::
+:::
+
+:::: {.column width="50%"}
+<br>
+<iframe class="slide-deck" src="incluir/basic.html"></iframe>
+:::
+:::
+
+:::: {.fragment .advance-slide .basics1}
+:::
+:::: {.fragment .advance-slide .basics2}
+:::
+:::: {.fragment .advance-slide .basics3}
+:::
+
+# Recursos
+
+-   Formoso, J (2024). Transforma tus datos en historias visuales con Quarto. Disponible en este [enlace](https://github.com/JFormoso/quarto-rladiesBA)
+
+-   Mock T (2022) 05 - Presentations. Presentación realizada para RStudio - conf. Disponible en este [enlace](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations)
+
+-   Hvitfeldt, E (2024). [Stunning presentations](https://rstudio-conf-2022.github.io/get-started-quarto/materials/05-presentations.html#/presentations).
+
+-   Hvitfeldt, E (2024). [Talk branded quarto abuja](https://github.com/EmilHvitfeldt/talk-branded-quarto-abuja/tree/main)
+
+-   Hvitfeldt, E (2023). [Talk quarto theming en Posit Conf 2023](https://github.com/EmilHvitfeldt/talk-quarto-theming-positconf)

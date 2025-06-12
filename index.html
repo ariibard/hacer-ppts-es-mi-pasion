@@ -274,12 +274,12 @@
 <h2>Mi primer <code>ppt.qmd</code></h2>
 
 <img data-src="assets/crear_ppt.gif" class="r-stretch"></section>
-<section id="mi-primer-ppt.qmd-1" class="slide level2">
-<h2>Mi primer <code>ppt.qmd</code></h2>
+<section id="mi-primera-ppt.qmd" class="slide level2">
+<h2>Mi primera <span class="text-pink-dark">ppt.qmd</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="codewindow quarto">
-<p>basic.qmd</p>
+<p>index.qmd</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Quarto básico"</span></span>
 <span id="cb1-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> revealjs</span></span>
@@ -302,18 +302,16 @@
 <span id="cb1-20"><a href="" aria-hidden="true" tabindex="-1"></a>When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:</span>
 <span id="cb1-21"><a href="" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-22"><a href="" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
-<span id="cb1-23"><a href="" aria-hidden="true" tabindex="-1"></a>::: {.cell-output .cell-output-stdout}</span>
-<span id="cb1-24"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-25"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-26"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">[1] 2</span></span>
-<span id="cb1-27"><a href="" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-28"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-29"><a href="" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-31"><a href="" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-23"><a href="" aria-hidden="true" tabindex="-1"></a>::: {.cell-output .cell-output-stdout}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>[1] 2</p>
+<pre><code>
+
+:::
+:::
+</code></pre>
 </div>
 </div><div class="column" style="width:50%;">
-<p><br> <iframe class="slide-deck" src="incluir/basic.html"></iframe></p>
+<p><br> <iframe class="slide-deck" src="includes/basics.html"></iframe></p>
 </div></div>
 <div class="fragment advance-slide basics1">
 
@@ -324,6 +322,295 @@
 <div class="fragment advance-slide basics3">
 
 </div>
+</section>
+<section id="transiciones" class="slide level2 smaller">
+<h2>Transiciones <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px"></h2>
+<div class="codewindow">
+<p>yaml</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
+<span id="cb3-2"><a href="" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Presentación"</span></span>
+<span id="cb3-3"><a href="" aria-hidden="true" tabindex="-1"></a>format<span class="sc">:</span></span>
+<span id="cb3-4"><a href="" aria-hidden="true" tabindex="-1"></a>  revealjs<span class="sc">:</span></span>
+<span id="cb3-5"><a href="" aria-hidden="true" tabindex="-1"></a>    transition<span class="sc">:</span> slide</span>
+<span id="cb3-6"><a href="" aria-hidden="true" tabindex="-1"></a>    transition<span class="sc">-</span>speed<span class="sc">:</span> convex</span>
+<span id="cb3-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<table class="caption-top">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 83%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Transición</strong></th>
+<th style="text-align: left;"><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>none</code></td>
+<td style="text-align: left;">Ninguna</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>fade</code></td>
+<td style="text-align: left;">Fundido cruzado</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>slide</code></td>
+<td style="text-align: left;">Deslizamiento horizontal</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>convex</code></td>
+<td style="text-align: left;">Deslizamiento en ángulo convexo</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>concave</code></td>
+<td style="text-align: left;">Deslizamiento en ángulo cóncavo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>zoom</code></td>
+<td style="text-align: left;">Escala la diapositiva entrante para que crezca desde el centro de la pantalla.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="cómo-tunear-la-ppt-cositas-de-quarto" class="slide level2">
+<h2>¿Cómo tunear la PPT? Cositas de Quarto</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="codewindow quarto">
+<p>index.qmd</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Seteos básicos"</span></span>
+<span id="cb4-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span></span>
+<span id="cb4-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb4-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    height: 900</span></span>
+<span id="cb4-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    width: 1600</span></span>
+<span id="cb4-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    transition: zoom</span></span>
+<span id="cb4-8"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    transition-speed: fast</span></span>
+<span id="cb4-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    slide-number: h.v #&lt; collapsed/total</span></span>
+<span id="cb4-10"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    # h.v: Horizontal . vertical slide number</span></span>
+<span id="cb4-11"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    # h/v: Horizontal / vertical slide numbe</span></span>
+<span id="cb4-12"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    # c: Flattened slide number</span></span>
+<span id="cb4-13"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    # c/t: Flattened slide number / total slides (default)</span></span>
+<span id="cb4-14"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    # true o false</span></span>
+<span id="cb4-15"><a href="" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb4-16"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb4-17"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu"># Título grande</span></span>
+<span id="cb4-19"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="" aria-hidden="true" tabindex="-1"></a>Cuerpo</span>
+<span id="cb4-21"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Indica cambio de diapositiva</span></span>
+<span id="cb4-23"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">### Subtitulo</span></span>
+<span id="cb4-25"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="" aria-hidden="true" tabindex="-1"></a>Cuerpo del texto</span>
+<span id="cb4-27"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-28"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Columnas</span></span>
+<span id="cb4-29"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-30"><a href="" aria-hidden="true" tabindex="-1"></a>::: columns</span>
+<span id="cb4-31"><a href="" aria-hidden="true" tabindex="-1"></a>::: {.column width="50%"}</span>
+<span id="cb4-32"><a href="" aria-hidden="true" tabindex="-1"></a>Columns</span>
+<span id="cb4-33"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="" aria-hidden="true" tabindex="-1"></a>Columns</span>
+<span id="cb4-35"><a href="" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-36"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="" aria-hidden="true" tabindex="-1"></a>::: {.column width="50%"}</span>
+<span id="cb4-38"><a href="" aria-hidden="true" tabindex="-1"></a>Columns</span>
+<span id="cb4-39"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="" aria-hidden="true" tabindex="-1"></a>Columns</span>
+<span id="cb4-41"><a href="" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-42"><a href="" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-43"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-44"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Imágenes</span></span>
+<span id="cb4-45"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-46"><a href="" aria-hidden="true" tabindex="-1"></a><span class="al">![](imagenes/dino4.jpg)</span></span>
+<span id="cb4-47"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-48"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Especificar el lugar de la imágen</span></span>
+<span id="cb4-49"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="" aria-hidden="true" tabindex="-1"></a><span class="al">![](imagenes/dino1.jpg)</span>{.absolute top=200 left=0 width="350"}</span>
+<span id="cb4-51"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-52"><a href="" aria-hidden="true" tabindex="-1"></a><span class="al">![](imagenes/dino2.jpg)</span>{.absolute top=50 right=50 width="250" height="450"}</span>
+<span id="cb4-53"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-54"><a href="" aria-hidden="true" tabindex="-1"></a><span class="al">![](imagenes/dino3.jpg)</span>{.absolute bottom=0 right="30%" height="400"}</span>
+<span id="cb4-55"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-56"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-57"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Centrado {.center}</span></span>
+<span id="cb4-58"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-59"><a href="" aria-hidden="true" tabindex="-1"></a>Permite tener el texto o imagenes en el centro de la diapositiva</span>
+<span id="cb4-60"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-61"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## {.center}</span></span>
+<span id="cb4-62"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-63"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">texto grande</span><span class="co">]</span>{.r-fit-text}</span>
+<span id="cb4-64"><a href="" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br> <iframe class="slide-deck" src="includes/tricks.html"></iframe></p>
+</div></div>
+<div class="fragment advance-slide tricks1">
+
+</div>
+<div class="fragment advance-slide tricks2">
+
+</div>
+<div class="fragment advance-slide tricks3">
+
+</div>
+<div class="fragment advance-slide tricks4">
+
+</div>
+<div class="fragment advance-slide tricks1">
+
+</div>
+<div class="fragment advance-slide tricks2">
+
+</div>
+<div class="fragment advance-slide tricks3">
+
+</div>
+<div class="fragment advance-slide tricks4">
+
+</div>
+<div class="fragment advance-slide tricks1">
+
+</div>
+<div class="fragment advance-slide tricks2">
+
+</div>
+<div class="fragment advance-slide tricks3">
+
+</div>
+<div class="fragment advance-slide tricks4">
+
+</div>
+</section>
+<section id="bloques" class="slide level2">
+<h2>Bloques</h2>
+<p>Pandoc permite aplicar clases CSS a bloques de contenido o fragmentos de texto usando una sintaxis especial en markdown.</p>
+<div class="codewindow">
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span> {.clase}</span>
+<span id="cb5-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>ALGÚN CONTENIDO<span class="sc">&gt;</span></span>
+<span id="cb5-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="er">:::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Es equivalente a</p>
+<div class="codewindow">
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>div class<span class="ot">=</span><span class="st">"clase"</span><span class="sc">&gt;</span></span>
+<span id="cb6-2"><a href="" aria-hidden="true" tabindex="-1"></a>  ALGÚN CONTENIDO</span>
+<span id="cb6-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span><span class="er">/</span>div<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="también-sucede-con-los-fragmentos" class="slide level2">
+<h2>También sucede con los fragmentos</h2>
+<div class="codewindow">
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="" aria-hidden="true" tabindex="-1"></a>Algún texto con una [palabra destacada]{.clase<span class="sc">-</span>span}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Esto aplica una clase CSS <code>clase-span</code> solo a esa palabra o fragmento. Es equivalente a:</p>
+<div class="codewindow">
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="sc">&lt;</span>span class<span class="ot">=</span><span class="st">"clase-span"</span><span class="sc">&gt;</span>palabra destacada<span class="sc">&lt;</span><span class="er">/</span>span<span class="sc">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="bloques-y-fragmentos-integrados-en-quarto" class="slide level2">
+<h2>Bloques y fragmentos integrados en <span class="text-pink-dark">Quarto</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="codewindow quarto">
+<p>index.qmd</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-2"><a href="" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Fragmentos y bloques"</span></span>
+<span id="cb9-3"><a href="" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb9-4"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">  revealjs:</span></span>
+<span id="cb9-5"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">    incremental: true</span></span>
+<span id="cb9-6"><a href="" aria-hidden="true" tabindex="-1"></a><span class="an">editor:</span><span class="co"> visual</span></span>
+<span id="cb9-7"><a href="" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb9-8"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## Listas incrementales </span></span>
+<span id="cb9-10"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="" aria-hidden="true" tabindex="-1"></a>::: {.incremental}</span>
+<span id="cb9-12"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>First item</span>
+<span id="cb9-14"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Second item</span>
+<span id="cb9-15"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb9-17"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="" aria-hidden="true" tabindex="-1"></a>También lo podemos apagar</span>
+<span id="cb9-19"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="" aria-hidden="true" tabindex="-1"></a>::: {.nonincremental}</span>
+<span id="cb9-21"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>1st Item</span>
+<span id="cb9-23"><a href="" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>2nd Item</span>
+<span id="cb9-24"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-25"><a href="" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb9-26"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-27"><a href="" aria-hidden="true" tabindex="-1"></a><span class="fu">## No se limita solo a bullets </span></span>
+<span id="cb9-28"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="" aria-hidden="true" tabindex="-1"></a>Not limited to just bullet points...</span>
+<span id="cb9-30"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="" aria-hidden="true" tabindex="-1"></a>Usando <span class="in">`. . .`</span> indicamos un corte en algún lugar</span>
+<span id="cb9-32"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-33"><a href="" aria-hidden="true" tabindex="-1"></a>. . .</span>
+<span id="cb9-34"><a href="" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-35"><a href="" aria-hidden="true" tabindex="-1"></a>::: {.cell}</span>
+<span id="cb9-36"><a href="" aria-hidden="true" tabindex="-1"></a>::: {.cell-output .cell-output-stdout}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>               mpg cyl disp  hp drat    wt  qsec vs am gear carb</code></pre>
+<p>Mazda RX4 21.0 6 160 110 3.90 2.620 16.46 0 1 4 4 Mazda RX4 Wag 21.0 6 160 110 3.90 2.875 17.02 0 1 4 4 Datsun 710 22.8 4 108 93 3.85 2.320 18.61 1 1 4 1 Hornet 4 Drive 21.4 6 258 110 3.08 3.215 19.44 1 0 3 1 Hornet Sportabout 18.7 8 360 175 3.15 3.440 17.02 0 0 3 2 Valiant 18.1 6 225 105 2.76 3.460 20.22 1 0 3 1</p>
+<pre><code>
+
+:::
+:::
+
+## Fragmentos
+
+::: {.fragment}
+Aparece
+:::
+
+::: {.fragment .fade-out}
+Se va
+:::
+
+::: {.fragment .highlight-red}
+En rojo
+:::
+
+::: {.fragment .fade-in-then-out}
+Aparece y se va
+:::
+
+## Combinados {.smaller}
+
+Podemos hacer que a 1 solo fragmento le suceda todo junto
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+::: {.fragment .semi-fade-out}
+Hola &gt; Rojo &gt; Adiós
+:::
+:::
+:::
+
+Esta es una [frase importante!]{.fragment .highlight-red}
+
+Podemos hacer que algo [aparezca]{.fragment .fade-in} en el medio de una oración
+
+## Orden
+
+::: {.fragment fragment-index=3}
+Último
+:::
+
+::: {.fragment fragment-index=1}
+Aparece primero
+:::
+
+::: {.fragment fragment-index=2}
+Segundo
+:::
+</code></pre>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br> <iframe class="slide-deck" src="includes/listas.html"></iframe></p>
+</div></div>
 </section></section>
 <section id="recursos" class="title-slide slide level1 center">
 <h1>Recursos</h1>

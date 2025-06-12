@@ -1,0 +1,85 @@
+---
+title: "Fragmentos y bloques"
+format: 
+  revealjs:
+    incremental: true
+editor: visual
+---
+
+## Listas incrementales 
+
+::: {.incremental}
+
+- First item
+- Second item
+
+:::
+
+También lo podemos apagar
+
+::: {.nonincremental}
+
+- 1st Item
+- 2nd Item
+
+:::
+
+## No se limita solo a bullets 
+
+Not limited to just bullet points...
+
+Usando `. . .` indicamos un corte en algún lugar
+
+. . .
+
+```{r}
+head(mtcars)
+```
+
+## Fragmentos
+
+::: {.fragment}
+Aparece
+:::
+
+::: {.fragment .fade-out}
+Se va
+:::
+
+::: {.fragment .highlight-red}
+En rojo
+:::
+
+::: {.fragment .fade-in-then-out}
+Aparece y se va
+:::
+
+## Combinados {.smaller}
+
+Podemos hacer que a 1 solo fragmento le suceda todo junto
+
+::: {.fragment .fade-in}
+::: {.fragment .highlight-red}
+::: {.fragment .semi-fade-out}
+Hola > Rojo > Adiós
+:::
+:::
+:::
+
+Esta es una [frase importante!]{.fragment .highlight-red}
+
+Podemos hacer que algo [aparezca]{.fragment .fade-in} en el medio de una oración
+
+## Orden
+
+::: {.fragment fragment-index=3}
+Último
+:::
+
+::: {.fragment fragment-index=1}
+Aparece primero
+:::
+
+::: {.fragment fragment-index=2}
+Segundo
+:::

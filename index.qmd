@@ -76,21 +76,21 @@ Todo lo que necesitas
 
 # Formatos
 
-- `revealjs` es el sustituto de Xaringan, pero con sintaxis nativa de Pandoc
-- `beamer` para diapositivas LaTex (PDF)
-- `Powerpoint` para cuando tengas que trabajar a través de Office
+-   `revealjs` es el sustituto de Xaringan, pero con sintaxis nativa de Pandoc
+-   `beamer` para diapositivas LaTex (PDF)
+-   `Powerpoint` para cuando tengas que trabajar a través de Office
 
-::: {.callout-note}
+::: callout-note
 # Definiciones
 
-**`pandoc`** es una herramienta de conversión de documentos que permite transformar archivos markdown a pdf, word, latex, etc. 
+**`pandoc`** es una herramienta de conversión de documentos que permite transformar archivos markdown a pdf, word, latex, etc.
 
 **`xaringan`** es un paquete de R basado también en reveal.js, muy popular en R Markdown
 
 **`reveal.js`** es un marco de trabajo de presentaciones HTML de código abierto. Permite a cualquier persona crear presentaciones completas y atractivas de forma gratuita en la web. Guía [aquí](https://quarto.org/docs/presentations/revealjs/)
 :::
 
-## {.center style="text-align: center;"}
+##  {.center style="text-align: center;"}
 
 ::: {.r-fit-text .title-text .text-pink}
 `{revealjs}`
@@ -102,30 +102,169 @@ Allá vamos
 
 ![](assets/crear_ppt.gif)
 
-## Mi primer `ppt.qmd`
+## Mi primera [ppt.qmd]{.text-pink-dark}
+
+:::::: columns
+:::: {.column width="50%"}
+::: {.codewindow .quarto}
+index.qmd
+
+``` md
+{{< include includes/basics.qmd >}}
+```
+:::
+::::
+
+::: {.column width="50%"}
+<br> <iframe class="slide-deck" src="includes/basics.html"></iframe>
+:::
+::::::
+
+::: {.fragment .advance-slide .basics1}
+:::
+
+::: {.fragment .advance-slide .basics2}
+:::
+
+::: {.fragment .advance-slide .basics3}
+:::
+
+## Transiciones <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px"> {.smaller}
+
+::: codewindow
+yaml
+```r
+---
+title: "Presentación"
+format:
+  revealjs:
+    transition: slide
+    transition-speed: convex
+---
+```
+:::
+
+
+| **Transición** | **Descripción** |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `none` | Ninguna |
+| `fade` | Fundido cruzado |
+| `slide` | Deslizamiento horizontal |
+| `convex` | Deslizamiento en ángulo convexo |
+| `concave` | Deslizamiento en ángulo cóncavo |
+| `zoom` | Escala la diapositiva entrante para que crezca desde el centro de la pantalla. |
+
+
+## ¿Cómo tunear la PPT? Cositas de Quarto
 
 :::: columns
 :::: {.column width="50%"}
 :::: {.codewindow .quarto}
-basic.qmd
+index.qmd
 `````md
-{{< include incluir/basic.qmd >}}
+{{< include includes/tricks.qmd >}}
 `````
 :::
 :::
 
 :::: {.column width="50%"}
 <br>
-<iframe class="slide-deck" src="incluir/basic.html"></iframe>
+<iframe class="slide-deck" src="includes/tricks.html"></iframe>
 :::
 :::
 
-:::: {.fragment .advance-slide .basics1}
+:::: {.fragment .advance-slide .tricks1}
 :::
-:::: {.fragment .advance-slide .basics2}
+:::: {.fragment .advance-slide .tricks2}
 :::
-:::: {.fragment .advance-slide .basics3}
+:::: {.fragment .advance-slide .tricks3}
 :::
+:::: {.fragment .advance-slide .tricks4}
+:::
+:::: {.fragment .advance-slide .tricks1}
+:::
+:::: {.fragment .advance-slide .tricks2}
+:::
+:::: {.fragment .advance-slide .tricks3}
+:::
+:::: {.fragment .advance-slide .tricks4}
+:::
+:::: {.fragment .advance-slide .tricks1}
+:::
+:::: {.fragment .advance-slide .tricks2}
+:::
+:::: {.fragment .advance-slide .tricks3}
+:::
+:::: {.fragment .advance-slide .tricks4}
+:::
+
+## Bloques
+
+Pandoc permite aplicar clases CSS a bloques de contenido o fragmentos de texto usando una sintaxis especial en markdown.
+
+::: codewindow 
+```r
+::: {.clase}
+<ALGÚN CONTENIDO>
+:::
+
+```
+:::
+
+Es equivalente a 
+
+::: codewindow 
+```r
+<div class="clase">
+  ALGÚN CONTENIDO
+</div>
+```
+:::
+
+## También sucede con los fragmentos
+
+::: codewindow 
+```r
+Algún texto con una [palabra destacada]{.clase-span}
+```
+:::
+
+Esto aplica una clase CSS `clase-span` solo a esa palabra o fragmento. Es equivalente a:
+
+::: codewindow 
+```r
+<span class="clase-span">palabra destacada</span>
+```
+:::
+
+
+## Bloques y fragmentos integrados en [Quarto]{.text-pink-dark}
+
+:::::: columns
+:::: {.column width="50%"}
+::: {.codewindow .quarto}
+index.qmd
+
+``` md
+{{< include includes/listas.qmd >}}
+```
+:::
+::::
+
+::: {.column width="50%"}
+<br> <iframe class="slide-deck" src="includes/listas.html"></iframe>
+:::
+::::::
+
+::: {.fragment .advance-slide .basics1}
+:::
+
+::: {.fragment .advance-slide .basics2}
+:::
+
+::: {.fragment .advance-slide .basics3}
+:::
+
 
 # Recursos
 

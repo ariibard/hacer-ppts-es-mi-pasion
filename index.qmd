@@ -1,0 +1,51 @@
+---
+format:
+  revealjs: 
+    theme: [default, styles.scss]
+    width: 1280
+    height: 720
+echo: false
+menu: false
+code-line-numbers: false
+revealjs-plugins:
+  - codewindow
+editor:
+  render-on-save: true
+---
+
+##  {.center style="text-align: center;"}
+
+::: wave3
+![](assets/6.png)
+:::
+
+::: wave2
+![](assets/5.png)
+:::
+
+::: wave1
+![](assets/4.png)
+:::
+
+Get ready with me para armar
+
+::: {.r-fit-text .title-text .text-pink}
+Presentaciones
+
+con [Quarto]{.flow-quarto}
+:::
+
+## Si esperabas una señal para aprender a usar Quarto, es esta {.center style="text-align: center;"}
+
+::::: columns
+::: {.column width="50%"}
+![](assets/tacho.png){width="497" class="bounce"}
+:::
+
+::: {.column width="50%"}
+![](assets/fan.png){class="spin"}
+:::
+:::::
+
+## Quarto 
+

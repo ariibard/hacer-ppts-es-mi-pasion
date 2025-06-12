@@ -35,17 +35,36 @@ Presentaciones
 con [Quarto]{.flow-quarto}
 :::
 
-## Si esperabas una señal para aprender a usar Quarto, es esta {.center style="text-align: center;"}
+##  {.center style="text-align: center;"}
+
+::: wave3
+![](assets/6.png)
+:::
+
+::: wave2
+![](assets/5.png)
+:::
+
+::: wave1
+![](assets/4.png)
+:::
+
+::: {.r-fit-text .title-text .text-pink}
+Todo lo que necesitas
+
+[en un solo lugar]{.text-black} 😉
+:::
+
+## Esta es la señal que esperabas para empezar a usar Quarto everywhere {.center style="text-align: center;"}
 
 ::::: columns
 ::: {.column width="50%"}
-![](assets/tacho.png){width="497" class="bounce"}
+![](assets/tacho.png){.bounce width="497"}
 :::
 
 ::: {.column width="50%"}
-![](assets/fan.png){class="spin"}
+![](assets/fan.png){.spin}
 :::
 :::::
 
-## Quarto 
-
+## Quarto

@@ -1,0 +1,12 @@
+---
+title: "Presentación"
+format:
+  revealjs: 
+    theme: moon
+---
+
+## Diapositiva X
+
+```{r}
+1 + 1
+```

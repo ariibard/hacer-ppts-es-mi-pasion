@@ -12,6 +12,7 @@ menu: false
 code-line-numbers: false
 revealjs-plugins:
   - codewindow
+  - highlightword
 editor:
   render-on-save: true
 ---
@@ -150,7 +151,7 @@ format:
 :::
 
 | **Transición** | **Descripción** |
-|:-----------------|:-----------------------------------------------------|
+|:------------------|:----------------------------------------------------|
 | `none` | Ninguna |
 | `fade` | Fundido cruzado |
 | `slide` | Deslizamiento horizontal |
@@ -346,15 +347,14 @@ index.qmd
 ::: {.fragment .advance-slide .tricks4}
 :::
 
-## Código 
+## Código
 
-`#| code-line-numbers: "3"` para resaltar la 3° linea 
+`#| code-line-numbers: "3"` para resaltar la 3° linea
 
 `#| output-location: column` para mostrar el resultado a la izquierda y no abajo
 
-::: codewindow
-
-```r
+::: {.codewindow .quarto}
+``` r
 #| output-location: column
 #| code-line-numbers: "3"
 
@@ -368,10 +368,7 @@ hchart(
   hc_title(text = "<b>Gráfico de líneas</b>") |>
   hc_subtitle(text = "<i>Ejemplo de gráfico de líneas en Highcharter con datos generados</i>") |>
   hc_credits(enabled = TRUE, text = "http://elartedeldato.com")
-
 ```
-
-
 :::
 
 ```{r}
@@ -380,12 +377,12 @@ df_series <- data.frame(
   y = abs(cumsum(rnorm(40, 1, 100) + runif(40, 1, 20))),
   grupo = rep(c("A", "B"), each = 20)
 )
+
 ```
 
 ## Código {.smaller}
 
-::: codewindow
-
+::: {.codewindow .quarto}
 ```{r echo=TRUE}
 #| output-location: column
 #| code-line-numbers: "3"
@@ -405,19 +402,153 @@ hchart(
 
 # THEMES
 
-[https://quarto.org/docs/presentations/revealjs/themes.html](https://quarto.org/docs/presentations/revealjs/themes.html)
+<https://quarto.org/docs/presentations/revealjs/themes.html>
 
-::: codewindow
+:::::: columns
+:::: {.column width="50%"}
+<br>
 
-```r
+::: {.codewindow .quarto}
+index.qmd
+
+``` r
 ---
 title: "Presentación"
 format:
   revealjs: 
-    theme: serif
+    theme: moon
 ---
 ```
 :::
+::::
+
+::: {.column width="50%"}
+<br> <iframe class="slide-deck" src="includes/theme_q.html"></iframe>
+:::
+::::::
+
+## 
+
+::: {.r-fit-text .title-text .text-pink}
+¿Y si [no]{.flow-quarto} es
+
+lo que quiero?
+:::
+
+# ¿Si quiero otros
+
+[que no estan preseteados?]{.title-text .text-pink}
+
+::: {.absolute left="70%" top="-50%"}
+[colores]{.fragment .highlight-pink}
+:::
+
+::: {.absolute left="70%" top="35%"}
+[fuentes]{.fragment .fonts style="opacity: 1; visibility: unset;"}
+:::
+
+::: {.absolute left="70%" top="120%"}
+[tamaños]{.fragment .sizes style="opacity: 1; visibility: unset;"}
+:::
+
+## Don´t worry
+
+:::::: columns
+:::: {.column width="50%"}
+![](assets/scss.png){fig-align="center"}
+::::
+
+::: {.column width="50%"}
+**SCSS**(Sassy CSS) es una sintaxis más moderna y flexible de SASS (Syntactically Awesome Stylesheets), un lenguaje de preprocesador CSS.
+
+::: callout-note
+# CSS
+
+Significa *Cascading Style Sheets* (Hojas de estilo en cascada).
+
+Es un lenguaje que se usa para dar estilo a las páginas web: controla cómo se ven los elementos en pantalla (colores, tamaños, tipografías, márgenes, etc.).
+
+:::
+:::
+::::::
+
+## 
+
+::: {.r-fit-text .title-text .text-pink}
+Asumiendo que 
+
+sabemos lo que 
+
+queremos hacer
+:::
+
+
+## Fuentes 
+
+<!-- google fonts -->
+
+## Colores
+
+<!-- pagina hexs + color contrast checker -->
+
+
+## 
+
+::: {.r-fit-text .title-text .text-pink}
+Presentaciones 
+
+y [templates]{.flow-quarto} 
+
+para inspirarnos
+
+:::
+
+##
+
+![](https://raw.githubusercontent.com/kazuyanagimoto/quartomonothemer/main/man/figures/quartomonothemer.gif)
+
+:::: footer
+<https://github.com/kazuyanagimoto/quartomonothemer>
+:::
+
+
+##
+
+<iframe class="slide-deck" style="height:800px; max-width: 100%; resize:both;" src="https://grantmcdermott.com/quarto-revealjs-clean-demo/template.html#/title-slide"></iframe>
+
+:::: footer
+<https://github.com/grantmcdermott/quarto-revealjs-clean>
+:::
+
+## 
+
+<iframe class="slide-deck" style="height:800px; max-width: 100%; resize:both;" src="https://emilhvitfeldt.github.io/talk-socalrug-hackathon-feature-engineering/#/feature-engineering"></iframe>
+
+:::: footer
+<https://emilhvitfeldt.github.io/talk-socalrug-hackathon-feature-engineering/#/feature-engineering>
+:::
+
+
+##
+
+![](https://raw.githubusercontent.com/EmilHvitfeldt/quarto-revealjs-earth/main/demo.gif)
+
+
+:::: footer
+<https://github.com/EmilHvitfeldt/quarto-revealjs-earth>
+:::
+
+
+##
+
+![](https://raw.githubusercontent.com/ariibard/quarto-revealjs-wildflowers/main/template.gif)
+
+:::: footer
+
+<https://github.com/ariibard/quarto-revealjs-wildflowers>
+
+:::
+
 
 # Fuentes
 
@@ -430,3 +561,5 @@ format:
 -   Hvitfeldt, E (2024). [Talk branded quarto abuja](https://github.com/EmilHvitfeldt/talk-branded-quarto-abuja/tree/main)
 
 -   Hvitfeldt, E (2023). [Talk quarto theming en Posit Conf 2023](https://github.com/EmilHvitfeldt/talk-quarto-theming-positconf)
+
+-   Blog de slidecraft 101 [enlace](https://emilhvitfeldt.com/blog#category=slidecraft%20101)

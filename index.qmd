@@ -143,7 +143,7 @@ format:
     height: 900
     width: 1600
     transition: slide
-    transition-speed: convex
+    transition-speed: fast
     slide-number: h.v #< collapsed/total | h.v: Horizontal . vertical slide number
     # h/v: Horizontal / vertical slide numbe | c: Flattened slide number | c/t: Flattened slide number / total slides (default)
 ---

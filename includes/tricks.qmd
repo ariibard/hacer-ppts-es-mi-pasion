@@ -1,23 +1,8 @@
 ---
-title: "Seteos básicos"
-format:
-  revealjs:
-    height: 900
-    width: 1600
-    transition: zoom
-    transition-speed: fast
-    slide-number: h.v #< collapsed/total
-    # h.v: Horizontal . vertical slide number
-    # h/v: Horizontal / vertical slide numbe
-    # c: Flattened slide number
-    # c/t: Flattened slide number / total slides (default)
-    # true o false
-editor: visual
+title: "Algunos seteos"
+format: revealjs
+
 ---
-
-# Título grande
-
-Cuerpo
 
 ## Indica cambio de diapositiva
 
@@ -27,7 +12,7 @@ Cuerpo del texto
 
 ## Columnas
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 Columns
 
@@ -39,26 +24,5 @@ Columns
 
 Columns
 :::
-:::
-
-## Imágenes
-
-![](imagenes/dino4.jpg)
-
-## Especificar el lugar de la imágen
-
-![](imagenes/dino1.jpg){.absolute top=200 left=0 width="350"}
-
-![](imagenes/dino2.jpg){.absolute top=50 right=50 width="250" height="450"}
-
-![](imagenes/dino3.jpg){.absolute bottom=0 right="30%" height="400"}
-
-
-## Centrado {.center}
-
-Permite tener el texto o imagenes en el centro de la diapositiva
-
-## {.center}
-
-[texto grande]{.r-fit-text}
+:::::
 

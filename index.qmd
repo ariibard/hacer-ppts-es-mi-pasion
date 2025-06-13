@@ -104,30 +104,31 @@ Allá vamos
 
 ## Mi primera [ppt.qmd]{.text-pink-dark}
 
-:::::: columns
+:::: columns
 :::: {.column width="50%"}
-::: {.codewindow .quarto}
+:::: {.codewindow .quarto}
 index.qmd
-
-``` md
+`````md
 {{< include includes/basics.qmd >}}
-```
+`````
 :::
-::::
-
-::: {.column width="50%"}
-<br> <iframe class="slide-deck" src="includes/basics.html"></iframe>
-:::
-::::::
-
-::: {.fragment .advance-slide .basics1}
 :::
 
-::: {.fragment .advance-slide .basics2}
+:::: {.column width="50%"}
+<br>
+<iframe class="slide-deck" src="includes/basics.html"></iframe>
+:::
 :::
 
-::: {.fragment .advance-slide .basics3}
+:::: {.fragment .advance-slide .basics1}
 :::
+:::: {.fragment .advance-slide .basics2}
+:::
+:::: {.fragment .advance-slide .basics3}
+:::
+
+
+
 
 ## Transiciones <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px"> {.smaller}
 
@@ -138,8 +139,16 @@ yaml
 title: "Presentación"
 format:
   revealjs:
+    height: 900
+    width: 1600
     transition: slide
     transition-speed: convex
+    slide-number: h.v #< collapsed/total
+    # h.v: Horizontal . vertical slide number
+    # h/v: Horizontal / vertical slide numbe
+    # c: Flattened slide number
+    # c/t: Flattened slide number / total slides (default)
+    # true o false
 ---
 ```
 :::
@@ -181,21 +190,36 @@ index.qmd
 :::
 :::: {.fragment .advance-slide .tricks4}
 :::
-:::: {.fragment .advance-slide .tricks1}
+
+
+## Imágenes y centrado
+
+:::::: columns
+:::: {.column width="50%"}
+::: {.codewindow .quarto}
+index.qmd
+`````md
+{{< include includes/img.qmd >}}
+`````
 :::
-:::: {.fragment .advance-slide .tricks2}
+::::
+
+:::: {.column width="50%"}
+<br>
+<iframe class="slide-deck" src="includes/img.html"></iframe>
+
+::::
+::::::
+
+::: {.fragment .advance-slide .tricks1}
 :::
-:::: {.fragment .advance-slide .tricks3}
+::: {.fragment .advance-slide .tricks2}
 :::
-:::: {.fragment .advance-slide .tricks4}
+::: {.fragment .advance-slide .tricks3}
 :::
-:::: {.fragment .advance-slide .tricks1}
-:::
-:::: {.fragment .advance-slide .tricks2}
-:::
-:::: {.fragment .advance-slide .tricks3}
-:::
-:::: {.fragment .advance-slide .tricks4}
+::: {.fragment .advance-slide .tricks4}
+
+
 :::
 
 ## Bloques

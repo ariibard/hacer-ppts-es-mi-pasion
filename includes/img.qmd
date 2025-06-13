@@ -1,0 +1,28 @@
+---
+title: "Imágenes y centrado"
+format:
+  revealjs:
+    height: 900
+    width: 1600
+editor: visual
+---
+
+## Imágenes
+
+![](imagenes/dino4.jpg)
+
+## Especificar el lugar de la imágen
+
+![](imagenes/dino1.jpg){.absolute top="200" left="0" width="350"}
+
+![](imagenes/dino2.jpg){.absolute top="50" right="50" width="250" height="450"}
+
+![](imagenes/dino3.jpg){.absolute bottom="0" right="30%" height="400"}
+
+## Centrado {.center}
+
+Permite tener el texto o imagenes en el centro de la diapositiva
+
+##  {.center}
+
+[texto grande]{.r-fit-text}

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="tricks_files/libs/clipboard/clipboard.min.js"></script>
-<script src="tricks_files/libs/quarto-html/tabby.min.js"></script>
-<script src="tricks_files/libs/quarto-html/popper.min.js"></script>
-<script src="tricks_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="tricks_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="tricks_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="tricks_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="img_files/libs/clipboard/clipboard.min.js"></script>
+<script src="img_files/libs/quarto-html/tabby.min.js"></script>
+<script src="img_files/libs/quarto-html/popper.min.js"></script>
+<script src="img_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="img_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="img_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="img_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.31">
 
-  <title>Algunos seteos</title>
+  <title>Imágenes y centrado</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="tricks_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="tricks_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="img_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="img_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,11 +28,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="tricks_files/libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
-  <link href="tricks_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="tricks_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="tricks_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="tricks_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="img_files/libs/revealjs/dist/theme/quarto-f563837468303362081e247dddd440d0.css">
+  <link href="img_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="img_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="img_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="img_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -126,27 +126,29 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Algunos seteos</h1>
+  <h1 class="title">Imágenes y centrado</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="indica-cambio-de-diapositiva" class="slide level2">
-<h2>Indica cambio de diapositiva</h2>
-<h3 id="subtitulo">Subtitulo</h3>
-<p>Cuerpo del texto</p>
+<section id="imágenes" class="slide level2">
+<h2>Imágenes</h2>
+
+<img data-src="imagenes/dino4.jpg" class="r-stretch"></section>
+<section id="especificar-el-lugar-de-la-imágen" class="slide level2">
+<h2>Especificar el lugar de la imágen</h2>
+<p><img data-src="imagenes/dino1.jpg" class="absolute" style="top: 200px; left: 0px; width: 350px; "></p>
+<p><img data-src="imagenes/dino2.jpg" class="absolute" style="top: 50px; right: 50px; width: 250px; height: 450px; "></p>
+<p><img data-src="imagenes/dino3.jpg" class="absolute" style="bottom: 0px; right: 30%; height: 400px; "></p>
 </section>
-<section id="columnas" class="slide level2">
-<h2>Columnas</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Columns</p>
-<p>Columns</p>
-</div><div class="column" style="width:50%;">
-<p>Columns</p>
-<p>Columns</p>
-</div></div>
+<section id="centrado" class="slide level2 center">
+<h2>Centrado</h2>
+<p>Permite tener el texto o imagenes en el centro de la diapositiva</p>
+</section>
+<section id="section" class="slide level2 center">
+<h2></h2>
+<p><span class="r-fit-text">texto grande</span></p>
 
 </section>
     </div>
@@ -157,19 +159,19 @@
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="tricks_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="img_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="tricks_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="tricks_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="tricks_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="tricks_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="tricks_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="img_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="img_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="img_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="img_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="img_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="tricks_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="tricks_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="tricks_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="tricks_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="img_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="img_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="img_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="img_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -330,9 +332,9 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1050,
+        width: 1600,
 
-        height: 700,
+        height: 900,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,

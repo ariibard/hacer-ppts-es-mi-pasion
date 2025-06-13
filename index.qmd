@@ -104,37 +104,37 @@ Allá vamos
 
 ## Mi primera [ppt.qmd]{.text-pink-dark}
 
-:::: columns
+:::::: columns
 :::: {.column width="50%"}
-:::: {.codewindow .quarto}
+::: {.codewindow .quarto}
 index.qmd
-`````md
+
+``` md
 {{< include includes/basics.qmd >}}
-`````
+```
 :::
+::::
+
+::: {.column width="50%"}
+<br> <iframe class="slide-deck" src="includes/basics.html"></iframe>
+:::
+::::::
+
+::: {.fragment .advance-slide .basics1}
 :::
 
-:::: {.column width="50%"}
-<br>
-<iframe class="slide-deck" src="includes/basics.html"></iframe>
-:::
+::: {.fragment .advance-slide .basics2}
 :::
 
-:::: {.fragment .advance-slide .basics1}
-:::
-:::: {.fragment .advance-slide .basics2}
-:::
-:::: {.fragment .advance-slide .basics3}
+::: {.fragment .advance-slide .basics3}
 :::
 
-
-
-
-## Transiciones <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px"> {.smaller}
+## Transiciones <img src="https://media.giphy.com/media/ObNTw8Uzwy6KQ/giphy.gif" width="30px"/> {.smaller}
 
 ::: codewindow
 yaml
-```r
+
+``` r
 ---
 title: "Presentación"
 format:
@@ -143,19 +143,14 @@ format:
     width: 1600
     transition: slide
     transition-speed: convex
-    slide-number: h.v #< collapsed/total
-    # h.v: Horizontal . vertical slide number
-    # h/v: Horizontal / vertical slide numbe
-    # c: Flattened slide number
-    # c/t: Flattened slide number / total slides (default)
-    # true o false
+    slide-number: h.v #< collapsed/total | h.v: Horizontal . vertical slide number
+    # h/v: Horizontal / vertical slide numbe | c: Flattened slide number | c/t: Flattened slide number / total slides (default)
 ---
 ```
 :::
 
-
 | **Transición** | **Descripción** |
-|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:-----------------|:-----------------------------------------------------|
 | `none` | Ninguna |
 | `fade` | Fundido cruzado |
 | `slide` | Deslizamiento horizontal |
@@ -163,82 +158,82 @@ format:
 | `concave` | Deslizamiento en ángulo cóncavo |
 | `zoom` | Escala la diapositiva entrante para que crezca desde el centro de la pantalla. |
 
-
 ## ¿Cómo tunear la PPT? Cositas de Quarto
-
-:::: columns
-:::: {.column width="50%"}
-:::: {.codewindow .quarto}
-index.qmd
-`````md
-{{< include includes/tricks.qmd >}}
-`````
-:::
-:::
-
-:::: {.column width="50%"}
-<br>
-<iframe class="slide-deck" src="includes/tricks.html"></iframe>
-:::
-:::
-
-:::: {.fragment .advance-slide .tricks1}
-:::
-:::: {.fragment .advance-slide .tricks2}
-:::
-:::: {.fragment .advance-slide .tricks3}
-:::
-:::: {.fragment .advance-slide .tricks4}
-:::
-
-
-## Imágenes y centrado
 
 :::::: columns
 :::: {.column width="50%"}
 ::: {.codewindow .quarto}
 index.qmd
-`````md
-{{< include includes/img.qmd >}}
-`````
+
+``` md
+{{< include includes/tricks.qmd >}}
+```
 :::
 ::::
 
-:::: {.column width="50%"}
-<br>
-<iframe class="slide-deck" src="includes/img.html"></iframe>
-
-::::
+::: {.column width="50%"}
+<br> <iframe class="slide-deck" src="includes/tricks.html"></iframe>
+:::
 ::::::
 
 ::: {.fragment .advance-slide .tricks1}
 :::
+
 ::: {.fragment .advance-slide .tricks2}
 :::
+
 ::: {.fragment .advance-slide .tricks3}
 :::
+
 ::: {.fragment .advance-slide .tricks4}
+:::
 
+## Imágenes
 
+:::::: columns
+:::: {.column width="50%"}
+::: {.codewindow .quarto}
+index.qmd
+
+``` md
+{{< include includes/img.qmd >}}
+```
+:::
+::::
+
+::: {.column width="50%"}
+<br> <iframe class="slide-deck" src="includes/img.html"></iframe>
+:::
+::::::
+
+::: {.fragment .advance-slide .tricks1}
+:::
+
+::: {.fragment .advance-slide .tricks2}
+:::
+
+::: {.fragment .advance-slide .tricks3}
+:::
+
+::: {.fragment .advance-slide .tricks4}
 :::
 
 ## Bloques
 
 Pandoc permite aplicar clases CSS a bloques de contenido o fragmentos de texto usando una sintaxis especial en markdown.
 
-::: codewindow 
-```r
+::: codewindow
+``` r
 ::: {.clase}
 <ALGÚN CONTENIDO>
 :::
-
 ```
 :::
 
-Es equivalente a 
+Es equivalente a
 
-::: codewindow 
-```r
+::: codewindow
+``` r
 <div class="clase">
   ALGÚN CONTENIDO
 </div>
@@ -247,20 +242,19 @@ Es equivalente a
 
 ## También sucede con los fragmentos
 
-::: codewindow 
-```r
+::: codewindow
+``` r
 Algún texto con una [palabra destacada]{.clase-span}
 ```
 :::
 
 Esto aplica una clase CSS `clase-span` solo a esa palabra o fragmento. Es equivalente a:
 
-::: codewindow 
-```r
+::: codewindow
+``` r
 <span class="clase-span">palabra destacada</span>
 ```
 :::
-
 
 ## Bloques y fragmentos integrados en [Quarto]{.text-pink-dark}
 
@@ -280,17 +274,152 @@ index.qmd
 :::
 ::::::
 
-::: {.fragment .advance-slide .basics1}
+::: {.fragment .advance-slide .tricks1}
 :::
 
-::: {.fragment .advance-slide .basics2}
+::: {.fragment .advance-slide .tricks2}
 :::
 
-::: {.fragment .advance-slide .basics3}
+::: {.fragment .advance-slide .tricks3}
 :::
 
+::: {.fragment .advance-slide .tricks4}
+:::
 
-# Recursos
+## Fondos
+
+:::::: columns
+:::: {.column width="50%"}
+::: {.codewindow .quarto}
+index.qmd
+
+``` md
+{{< include includes/fondos.qmd >}}
+```
+:::
+::::
+
+::: {.column width="50%"}
+<br> <iframe class="slide-deck" src="includes/fondos.html"></iframe>
+:::
+::::::
+
+::: {.fragment .advance-slide .tricks1}
+:::
+
+::: {.fragment .advance-slide .tricks2}
+:::
+
+::: {.fragment .advance-slide .tricks3}
+:::
+
+::: {.fragment .advance-slide .tricks4}
+:::
+
+## Otras cositas
+
+:::::: columns
+:::: {.column width="50%"}
+::: {.codewindow .quarto}
+index.qmd
+
+``` md
+{{< include includes/texto.qmd >}}
+```
+:::
+::::
+
+::: {.column width="50%"}
+<br> <iframe class="slide-deck" src="includes/texto.html"></iframe>
+:::
+::::::
+
+::: {.fragment .advance-slide .tricks1}
+:::
+
+::: {.fragment .advance-slide .tricks2}
+:::
+
+::: {.fragment .advance-slide .tricks3}
+:::
+
+::: {.fragment .advance-slide .tricks4}
+:::
+
+## Código 
+
+`#| code-line-numbers: "3"` para resaltar la 3° linea 
+
+`#| output-location: column` para mostrar el resultado a la izquierda y no abajo
+
+::: codewindow
+
+```r
+#| output-location: column
+#| code-line-numbers: "3"
+
+library(highcharter)
+
+hchart(
+    df_series,
+    type = "line",
+    hcaes(x = x, y = y, group = grupo)
+  ) |>
+  hc_title(text = "<b>Gráfico de líneas</b>") |>
+  hc_subtitle(text = "<i>Ejemplo de gráfico de líneas en Highcharter con datos generados</i>") |>
+  hc_credits(enabled = TRUE, text = "http://elartedeldato.com")
+
+```
+
+
+:::
+
+```{r}
+df_series <- data.frame(
+  x = rep(as.Date("2022-12-15") + lubridate::days(1:20), 2),
+  y = abs(cumsum(rnorm(40, 1, 100) + runif(40, 1, 20))),
+  grupo = rep(c("A", "B"), each = 20)
+)
+```
+
+## Código {.smaller}
+
+::: codewindow
+
+```{r echo=TRUE}
+#| output-location: column
+#| code-line-numbers: "3"
+library(highcharter)
+
+hchart(
+    df_series,
+    type = "line",
+    hcaes(x = x, y = y, group = grupo)
+  ) |>
+  hc_title(text = "<b>Gráfico de líneas</b>") |>
+  hc_subtitle(text = "<i>Ejemplo de gráfico de líneas en Highcharter con datos generados</i>") |>
+  hc_credits(enabled = TRUE, text = "http://elartedeldato.com")
+
+```
+:::
+
+# THEMES
+
+[https://quarto.org/docs/presentations/revealjs/themes.html](https://quarto.org/docs/presentations/revealjs/themes.html)
+
+::: codewindow
+
+```r
+---
+title: "Presentación"
+format:
+  revealjs: 
+    theme: serif
+---
+```
+:::
+
+# Fuentes
 
 -   Formoso, J (2024). Transforma tus datos en historias visuales con Quarto. Disponible en este [enlace](https://github.com/JFormoso/quarto-rladiesBA)
 

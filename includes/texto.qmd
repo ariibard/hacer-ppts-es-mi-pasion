@@ -1,0 +1,43 @@
+---
+title: "Otras cositas"
+format: revealjs
+editor: visual
+---
+
+## Centrado {.center}
+
+Permite tener el texto o imagenes en el centro de la diapositiva
+
+##  {.center}
+
+[texto grande]{.r-fit-text}
+
+## Alineación
+
+::: {style="text-align: right;"}
+<h2>Alineado a la derecha</h2>
+
+-   Ejemplo
+-   Otro ejemplo
+:::
+
+## Tabsets
+
+::: panel-tabset
+### Pestaña 1
+Pestaña 1 
+
+### Pestaña 2
+
+Pestaña 2
+:::
+
+## Notas al pie {.smaller}
+
+::: aside
+Notas sin número
+:::
+
+Notas numeradas[^1]
+
+[^1]: Esto es una nota al pie

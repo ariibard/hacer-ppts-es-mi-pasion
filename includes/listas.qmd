@@ -6,39 +6,29 @@ format:
 editor: visual
 ---
 
-## Listas incrementales 
+## Listas incrementales
 
-::: {.incremental}
-
-- First item
-- Second item
-
+::: incremental
+-   First item
+-   Second item
 :::
 
 También lo podemos apagar
 
-::: {.nonincremental}
-
-- 1st Item
-- 2nd Item
-
+::: nonincremental
+-   1st Item
+-   2nd Item
 :::
 
-## No se limita solo a bullets 
-
-Not limited to just bullet points...
-
-Usando `. . .` indicamos un corte en algún lugar
+## No se limita solo a bullets
 
 . . .
 
-```{r}
-head(mtcars)
-```
+frena
 
 ## Fragmentos
 
-::: {.fragment}
+::: fragment
 Aparece
 :::
 
@@ -58,13 +48,13 @@ Aparece y se va
 
 Podemos hacer que a 1 solo fragmento le suceda todo junto
 
-::: {.fragment .fade-in}
-::: {.fragment .highlight-red}
+::::: {.fragment .fade-in}
+:::: {.fragment .highlight-red}
 ::: {.fragment .semi-fade-out}
-Hola > Rojo > Adiós
+Hola \> Rojo \> Adiós
 :::
-:::
-:::
+::::
+:::::
 
 Esta es una [frase importante!]{.fragment .highlight-red}
 
@@ -72,14 +62,14 @@ Podemos hacer que algo [aparezca]{.fragment .fade-in} en el medio de una oració
 
 ## Orden
 
-::: {.fragment fragment-index=3}
+::: {.fragment fragment-index="3"}
 Último
 :::
 
-::: {.fragment fragment-index=1}
+::: {.fragment fragment-index="1"}
 Aparece primero
 :::
 
-::: {.fragment fragment-index=2}
+::: {.fragment fragment-index="2"}
 Segundo
 :::

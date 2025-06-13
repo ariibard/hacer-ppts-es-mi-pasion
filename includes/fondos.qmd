@@ -1,0 +1,31 @@
+---
+title: "Colores y fondos"
+format: 
+  revealjs:
+    incremental: true
+editor: visual
+---
+
+## Fondo se color azul {background-color="blue"}
+
+## Fondo con una imagen {background-image="imagenes/quarto-fondo.png" background-size="cover"}
+
+## Atributos
+
+| **Atributo** | **Default** | **Descripción** |
+|:-----------------------|:-----------------------|:-----------------------|
+| `background-image` |  |  |
+| `background-size` | cover | Ver [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size) |
+| `background-position` | center | Ver [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position) |
+| `background-repeat` | no-repeat | Ver [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat) . |
+| `background-opacity` | 1 | Opacidad. Escala de 1 (muy opaco) a 0 (transparente) |
+
+## Atributos {.smaller}
+
+| **Atributo** | **Default** | **Descripción** |
+|:-----------------------|:-----------------------|:-----------------------|
+| `background-image` |  |  |
+| `background-size` | cover | Ver [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size) |
+| `background-position` | center | Ver [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position) |
+| `background-repeat` | no-repeat | Ver [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat) . |
+| `background-opacity` | 1 | Opacidad. Escala de 1 (muy opaco) a 0 (transparente) |

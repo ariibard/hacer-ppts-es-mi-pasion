@@ -142,13 +142,13 @@
 <p><img data-src="imagenes/dino2.jpg" class="absolute" style="top: 50px; right: 50px; width: 250px; height: 450px; "></p>
 <p><img data-src="imagenes/dino3.jpg" class="absolute" style="bottom: 0px; right: 30%; height: 400px; "></p>
 </section>
-<section id="centrado" class="slide level2 center">
-<h2>Centrado</h2>
-<p>Permite tener el texto o imagenes en el centro de la diapositiva</p>
-</section>
-<section id="section" class="slide level2 center">
-<h2></h2>
-<p><span class="r-fit-text">texto grande</span></p>
+<section id="solapadas" class="slide level2">
+<h2>Solapadas</h2>
+<div class="r-stack">
+<p><img data-src="imagenes/bichos1.png" class="fragment" width="450"></p>
+<p><img data-src="imagenes/bichos2.png" class="fragment" width="400"></p>
+<p><img data-src="imagenes/bichos.png" class="fragment" width="300"></p>
+</div>
 
 </section>
     </div>
@@ -332,9 +332,9 @@
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1600,
+        width: 1050,
 
-        height: 900,
+        height: 700,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,

@@ -151,7 +151,7 @@ format:
 :::
 
 | **Transición** | **Descripción** |
-|:------------------|:----------------------------------------------------|
+|:-------------------|:---------------------------------------------------|
 | `none` | Ninguna |
 | `fade` | Fundido cruzado |
 | `slide` | Deslizamiento horizontal |
@@ -454,12 +454,12 @@ lo que quiero?
 ## Don´t worry
 
 :::::: columns
-:::: {.column width="50%"}
-![](assets/scss.png){fig-align="center"}
-::::
-
 ::: {.column width="50%"}
-**SCSS**(Sassy CSS) es una sintaxis más moderna y flexible de SASS (Syntactically Awesome Stylesheets), un lenguaje de preprocesador CSS.
+![](assets/scss.png){#zoom-spin .fragment fig-align="center"}
+:::
+
+:::: {.column width="50%"}
+**SCSS** (Sassy CSS) es una sintaxis más moderna y flexible de SASS (Syntactically Awesome Stylesheets), un lenguaje de preprocesador CSS.
 
 ::: callout-note
 # CSS
@@ -467,88 +467,139 @@ lo que quiero?
 Significa *Cascading Style Sheets* (Hojas de estilo en cascada).
 
 Es un lenguaje que se usa para dar estilo a las páginas web: controla cómo se ven los elementos en pantalla (colores, tamaños, tipografías, márgenes, etc.).
-
 :::
-:::
+::::
 ::::::
 
 ## 
 
 ::: {.r-fit-text .title-text .text-pink}
-Asumiendo que 
+¿Cómo
 
-sabemos lo que 
-
-queremos hacer
+lo usamos?
 :::
 
+## Fuentes
 
-## Fuentes 
+![](assets/google-fonts.png)
 
-<!-- google fonts -->
+::: footer
+[fonts.google.com](https://fonts.google.com/)
+:::
+
+## ¿Cómo obtengo la URL?
+
+![](assets/google-fonts-import.gif){fig-align="center" width="1143"}
 
 ## Colores
 
-<!-- pagina hexs + color contrast checker -->
+<iframe src="https://www.colorhexmap.com/" width="100%" height="600" style="border: none;">
 
+</iframe>
+
+::: footer
+[www.colorhexmap.com/](https://www.colorhexmap.com/)
+:::
+
+## Tester de contraste
+
+<iframe src="https://colourcontrast.cc/" width="100%" height="600" style="border: none;">
+
+</iframe>
+
+
+## SASS variables
+
+<iframe src="https://quarto.org/docs/output-formats/html-themes.html#sass-variables" width="100%" height="600" style="border: none;">
+
+</iframe>
+
+## Mi primer `.scsss` 
+
+:::: {.fragment .advance-slide}
+:::
+:::: {.fragment .advance-slide}
+:::
+
+:::: columns
+:::: {.column width="50%"}
+:::: {.codewindow .quarto}
+index.qmd
+`````md
+---
+format: 
+  revealjs:
+    theme: mi-estilo.scss
+---
+`````
+:::
+:::: {.codewindow .sass}
+style.scss
+
+{{< include includes/0scss.qmd >}}
+:::
+:::
+
+:::: {.column width="50%"}
+
+<iframe class="slide-deck" src="includes/scss1.html"></iframe>
+
+:::
+:::
 
 ## 
 
 ::: {.r-fit-text .title-text .text-pink}
-Presentaciones 
+Presentaciones
 
-y [templates]{.flow-quarto} 
+y [templates]{.flow-quarto}
 
 para inspirarnos
-
 :::
 
-##
+## 
 
 ![](https://raw.githubusercontent.com/kazuyanagimoto/quartomonothemer/main/man/figures/quartomonothemer.gif)
 
-:::: footer
+::: footer
 <https://github.com/kazuyanagimoto/quartomonothemer>
 :::
 
+## 
 
-##
+<iframe class="slide-deck" style="height:800px; max-width: 100%; resize:both;" src="https://grantmcdermott.com/quarto-revealjs-clean-demo/template.html#/title-slide">
 
-<iframe class="slide-deck" style="height:800px; max-width: 100%; resize:both;" src="https://grantmcdermott.com/quarto-revealjs-clean-demo/template.html#/title-slide"></iframe>
+</iframe>
 
-:::: footer
+::: footer
 <https://github.com/grantmcdermott/quarto-revealjs-clean>
 :::
 
 ## 
 
-<iframe class="slide-deck" style="height:800px; max-width: 100%; resize:both;" src="https://emilhvitfeldt.github.io/talk-socalrug-hackathon-feature-engineering/#/feature-engineering"></iframe>
+<iframe class="slide-deck" style="height:800px; max-width: 100%; resize:both;" src="https://emilhvitfeldt.github.io/talk-socalrug-hackathon-feature-engineering/#/feature-engineering">
 
-:::: footer
+</iframe>
+
+::: footer
 <https://emilhvitfeldt.github.io/talk-socalrug-hackathon-feature-engineering/#/feature-engineering>
 :::
 
-
-##
+## 
 
 ![](https://raw.githubusercontent.com/EmilHvitfeldt/quarto-revealjs-earth/main/demo.gif)
 
-
-:::: footer
+::: footer
 <https://github.com/EmilHvitfeldt/quarto-revealjs-earth>
 :::
 
-
-##
+## 
 
 ![](https://raw.githubusercontent.com/ariibard/quarto-revealjs-wildflowers/main/template.gif)
 
-:::: footer
-
+::: footer
 <https://github.com/ariibard/quarto-revealjs-wildflowers>
-
 :::
-
 
 # Fuentes
 

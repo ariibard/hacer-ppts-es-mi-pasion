@@ -4,14 +4,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Merienda:wght@300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Crimson+Text:ital@0;1&family=Sail&display=swap');
 
 /* Defino la fuente base de la presentación */
-$font-family-sans-serif: "Montserrat Alternates", sans-serif;  // por ejemplo
+$font-family-sans-serif: "Montserrat Alternates", sans-serif;
 
-/* Otros parámetros globales */
-$presentation-font-size-root: 46px;
-$link-color: #C71585;
+/* Definición de colores principales en tonos verdes */
+$theme-darkgreen: #004225;   // verde oscuro elegante
+$theme-green: #2E8B57;       // verde principal tipo 'sea green'
+$theme-lightgreen: #A8E6A1;  // verde claro suave, casi pastel
+$theme-white: #F7F8F9;       // blanco neutro
+$theme-yellow: #fdff89;
+
+// Colores de fondo y texto
+$body-bg: $theme-darkgreen;   // fondo de la página
+$body-color: $theme-white;    // color principal del texto
+$link-color: $theme-green;    // color de enlaces
+
+// titulo
+$presentation-heading-color: lighten($theme-green, 10%);
+
+/*-- scss:rules --*/
+
+.yellow {
+  color: $theme-yellow;
+  font-weight: bold;
+}
 
 
-$bg-color: #5699bd;
 
+/* Fragmento personalizado: hl-green */
+.reveal .slides section .fragment.hl-green {
+  opacity: unset;
+  visibility: unset;
 
+  &.visible {
+    background-color: $theme-lightgreen; 
+    padding: 0.2em 0.4em; 
+    border-radius: 4px;
+  }
+
+  &.current-fragment {
+    background-color: darken($theme-yellow, 10%);
+    color: $theme-darkgreen;
+  }
+}
 

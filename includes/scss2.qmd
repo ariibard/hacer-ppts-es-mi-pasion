@@ -1,0 +1,11 @@
+---
+title: ""
+format: 
+  revealjs:
+    theme: mi-estilo.scss
+---
+
+## Quarto
+
+[Quarto]{.yellow} enables you to weave [together content and executable code into a finished presentation]{.yellow}. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+

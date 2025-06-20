@@ -71,6 +71,20 @@ Todo lo que necesitas
 :::
 :::::
 
+## Antes de arrancar
+
+::: {.fragment .fade-in-then-out .r-fit-text}
+¿Quién alguna vez usó `Quarto`? 🙋‍♀️
+:::
+
+::: {.fragment .fade-in-then-out .r-fit-text}
+¿Quién alguna vez usó `RMarkdown`? 🙋‍♀️
+:::
+
+::: {.fragment .fade-up .r-fit-text}
+Sé qué es `Quarto` / `Rmarkdown` pero nunca lo usé 🙋‍♀️
+:::
+
 # Quarto
 
 ![](assets/horst-qmd-render-schema.png)
@@ -151,7 +165,7 @@ format:
 :::
 
 | **Transición** | **Descripción** |
-|:-------------------|:---------------------------------------------------|
+|:-----------------------|:-----------------------------------------------|
 | `none` | Ninguna |
 | `fade` | Fundido cruzado |
 | `slide` | Deslizamiento horizontal |
@@ -507,6 +521,20 @@ lo usamos?
 
 </iframe>
 
+## Accesibilidad {.smaller}
+
+Es importante aseguramos que la paleta elegida sea legible para personas con diferentes tipos de daltonismo.
+
+`prismatic::check_color_blindness()`
+
+::: {.codewindow .quarto}
+```{r echo = TRUE}
+
+paleta <- c("#004225", "#2E8B57", "#A8E6A1", "#F7F8F9")
+
+prismatic::check_color_blindness(paleta)
+```
+:::
 
 ## SASS variables
 
@@ -514,42 +542,228 @@ lo usamos?
 
 </iframe>
 
+## `.scss` ¿Cómo usarlo?
 
-
-## Mi primer `.scsss` 
-
-:::: {.fragment .advance-slide}
-:::
-:::: {.fragment .advance-slide}
-:::
-
-:::: columns
-:::: {.column width="50%"}
-:::: {.codewindow .quarto}
+::: {.codewindow .quarto}
 index.qmd
-`````md
+
+``` r
+---
+format:
+  revealjs: 
+    theme: [default, custom.scss]
+---
+```
+:::
+
+[Comentarios importantes]{.title-text .text-pink}
+
+::: {.codewindow .scss}
+custom.scss
+
+``` r
+/*-- scss:defaults --*/
+
+/*-- scss:rules --*/
+```
+:::
+
+## Mi primer `.scsss`
+
+::: {.fragment .advance-slide}
+:::
+
+::: {.fragment .advance-slide}
+:::
+
+::::::: columns
+:::: {.column width="50%"}
+::: {.codewindow .sass}
+style.scss
+
+``` scss
+/*-- scss:defaults --*/
+
+/* Importo TODAS mis Google Fonts usando el link */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Merienda:wght@300..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Crimson+Text:ital@0;1&family=Sail&display=swap');
+
+/* Defino la fuente base de la presentación */
+$font-family-sans-serif: "Montserrat Alternates", sans-serif;
+
+/* Definición de colores principales en tonos verdes */
+$theme-darkgreen: #004225;   // verde oscuro elegante
+$theme-green: #2E8B57;       // verde principal tipo 'sea green'
+$theme-lightgreen: #A8E6A1;  // verde claro suave, casi pastel
+$theme-white: #F7F8F9;       // blanco neutro
+
+// Colores de fondo y texto
+$body-bg: $theme-darkgreen;   // fondo de la página
+$body-color: $theme-white;    // color principal del texto
+$link-color: $theme-green;    // color de enlaces
+
+// titulo
+$presentation-heading-color: lighten($theme-green, 15%);
+
+/*-- scss:rules --*/
+```
+:::
+::::
+
+:::: {.column width="50%"}
+<iframe class="slide-deck" src="includes/scss1.html">
+
+</iframe>
+
+::: {.codewindow .quarto}
+index.qmd
+
+``` md
 ---
 format: 
   revealjs:
     theme: mi-estilo.scss
 ---
-`````
+```
 :::
-:::: {.codewindow .sass}
-style.scss
+::::
+:::::::
 
-{{< include includes/0scss.qmd >}}
+## `{.CSS}` {.smaller}
+
+Permiten agregar, por ejemplo, colores para resaltado.
+
+::::::: columns
+::::: {.column width="50%"}
+::: {.codewindow .scss}
+mi-estilo.css
+
+``` scss
+
+$theme-yellow: #fdff89;
+
+/*-- scss:rules --*/
+
+.yellow {
+  color: $theme-yellow;
+  font-weight: bold;
+}
+```
 :::
+
+::: {.codewindow .quarto}
+index.qmd
+
+``` r
+---
+title: ""
+format: 
+  revealjs:
+    theme: mi-estilo.scss
+---
+
+## Quarto
+
+[Quarto]{.yellow} enables you to weave [together content and executable code into a finished presentation]{.yellow}. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+```
+:::
+:::::
+
+::: {.column width="50%"}
+<iframe class="slide-deck" src="includes/scss2.html">
+
+</iframe>
+:::
+:::::::
+
+## Personalizar fragmentos
+
+Cuando diseñás un estilo para un fragmento, podés decidir cómo se ve `antes` de mostrarse, cómo se ve `mientras` aparece, y cómo se ve cuando ya `está mostrado`.
+
+RevealJS hace todo el trabajo de cambiar de un estado a otro usando **fragment-index**.
+
+::: codewindow
+``` r
+.reveal .slides section .fragment.fragment-name {
+}
+
+.reveal .slides section .fragment.fragment-name.visible {
+}
+
+.reveal .slides section .fragment.fragment-name.current-fragment {
+}
+```
 :::
 
-:::: {.column width="50%"}
+## Personalizar fragmentos {.smaller}
 
-<iframe class="slide-deck" src="includes/scss1.html"></iframe>
+::::::: columns
+::::: {.column width="40%"}
+::: {.codewindow .scss}
+mi-estilo.css
 
+``` r
+/* Fragmento personalizado: hl-green */
+.reveal .slides section .fragment.hl-green {
+  opacity: unset;
+  visibility: unset;
+
+  &.visible {
+    background-color: $theme-lightgreen; 
+    padding: 0.2em 0.4em; 
+    border-radius: 4px;
+  }
+
+   &.current-fragment {
+    background-color: darken($theme-yellow, 10%);
+    color: $theme-darkgreen;
+  }
+}
+```
 :::
+
+::: {.codewindow .quarto}
+``` r
+## Quarto
+
+[Quarto]{.yellow} enables you to weave [together content and executable code into a finished presentation]{.yellow}. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+- Punto inicial
+- Otro punto
+- Fragmento destacado:
+
+::: {.fragment .hl-green}
+  Este aparece con fondo verde
+:::
+```
+:::
+:::::
+
+::: {.column width="60%"}
+<iframe class="slide-deck" src="includes/scss3.html">
+
+</iframe>
+
+| Estado       | Selector                              |
+|--------------|---------------------------------------|
+| **Antes**    | `.fragment.hl-green`                  |
+| **Mientras** | `.fragment.hl-green.current-fragment` |
+| **Después**  | `.fragment.hl-green.visible`          |
+:::
+:::::::
+
+::: {.fragment .advance-slide}
 :::
 
-## 
+::: {.fragment .advance-slide}
+:::
+
+## Paleta
+
+## Posición
+
+## Código
+
+## Clases de slides
 
 ::: {.r-fit-text .title-text .text-pink}
 Presentaciones

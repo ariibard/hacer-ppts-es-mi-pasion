@@ -271,7 +271,7 @@ Esto aplica una clase CSS `clase-span` solo a esa palabra o fragmento. Es equiva
 ```
 :::
 
-## Bloques y fragmentos integrados en [Quarto]{.text-pink-dark}
+## Bloques y fragmentos integrados
 
 :::::: columns
 :::: {.column width="50%"}
@@ -764,6 +764,8 @@ mi-estilo.css
 ## Código
 
 ## Clases de slides
+
+##
 
 ::: {.r-fit-text .title-text .text-pink}
 Presentaciones
